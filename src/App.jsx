@@ -32,7 +32,7 @@ function App() {
 
   const onEdit = (targetId, newContent) => {
     setData(
-      data.filter((item) =>
+      data.map((item) =>
         item.id === targetId ? { ...item, content: newContent } : item
       )
     );

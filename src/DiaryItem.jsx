@@ -34,7 +34,7 @@ const DiaryItem = ({
     }
 
     if (window.confirm(`${id + 1}번 째 일기를 수정하시겠습니까?`)) {
-      onEdit(id, content);
+      onEdit(id, localContent);
       toggleIsEdit();
     }
   };
