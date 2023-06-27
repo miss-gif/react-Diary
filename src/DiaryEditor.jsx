@@ -23,7 +23,7 @@ const DiaryEditor = ({ onCreate }) => {
       return;
     }
 
-    if (state.content.length < 5) {
+    if (state.content.length < 1) {
       contentInput.current.focus();
       return;
     }
