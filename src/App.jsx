@@ -25,9 +25,9 @@ function App() {
   const onDelete = (targetId) => {
     console.log(`${targetId + 1}가 삭제되었습니다.`);
 
-    const newDiaryList = data.filter((item) => item.id === targetId);
+    const newDiaryList = data.filter((item) => item.id !== targetId);
     console.log(newDiaryList);
-    setData([newDiaryList]);
+    setData(newDiaryList);
   };
 
   return (
