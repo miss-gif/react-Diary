@@ -22,10 +22,18 @@ function App() {
     setData([newItem, ...data]);
   };
 
+  const onDelete = (targetId) => {
+    console.log(`${targetId + 1}가 삭제되었습니다.`);
+
+    const newDiaryList = data.filter((item) => item.id === targetId);
+    console.log(newDiaryList);
+    setData([newDiaryList]);
+  };
+
   return (
     <>
       <DiaryEditor onCreate={onCreate} />
-      <DiaryList diaryList={data} />
+      <DiaryList onDelete={onDelete} diaryList={data} />
     </>
   );
 }
